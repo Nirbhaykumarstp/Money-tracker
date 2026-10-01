@@ -7,17 +7,24 @@
     <link rel='stylesheet' href='./src/output.css'>
 </head>
 <body>
-    <header class="absolute top-0 flex flex-row justify-center w-full px-2 py-3 bg-green-100">
-        <nav class="sm:w-full">
-            <ul class="flex flex-row justify-center gap-10">
-                <li class="text-2xl underline underline-offset-2">DashBoard</li>
-                <li class="text-2xl underline underline-offset-2">Income</li>
-                <li class="text-2xl underline underline-offset-2">Expense</li>
+    <header class="w-full py-5 shadow-lg bg-blue-100">
+        <nav class="w-full">
+            <ul class="flex flex-row justify-between">
+                <div class="flex flex-row justify-center gap-5 text-xl px-5">
+                    <li class="underline underline-offset-3"><a href="dashboard.html">Dashboard</a></li>
+                    <li class="underline underline-offset-3"><a href="income.html">Income</a></li>
+                    <li class="underline underline-offset-3"><a href="expense.html">Expense</a></li>
+                </div>
+                <div>
+                    <h1 class="text-3xl font-bold text-center">MyKha₹cha</h1>
+                </div>
+                <div class="px-3">
+                    <li class="text-red-200 text-xl"><a href="logout">Logout</a></li>
+                </div>
             </ul>
         </nav>
     </header>
     <div class="w-full max-w-md bg-blue-100 p-6 rounded-lg shadow-lg shadow-black sm:w-1/2 sm:m-auto lg:m-auto">
-        <!-- <h2 class="font-bold text-3xl font-sans">Income Overview</h2> -->
         <h1 class="text-2xl font-bold text-center mb-6">
             Add Income
         </h1>
