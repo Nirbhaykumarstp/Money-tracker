@@ -419,7 +419,6 @@
   .border-r-black {
     border-right-color: var(--color-black);
   }
-
   .bg-amber-50 {
     background-color: var(--color-amber-50);
   }
@@ -459,9 +458,14 @@
   .bg-green-100 {
     background-color: var(--color-green-100);
   }
-
+  .bg-red-100{
+    background-color: rgb(248, 141, 141);
+  }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .text-red-200{
+    color: rgb(245, 58, 58);
   }
 
   .bg-white\/10 {
@@ -487,7 +491,9 @@
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
-
+  .px-5{
+    padding-inline: calc(var(--spacing) * 5);
+  }
   .py-1 {
     padding-block: var(--spacing);
   }
@@ -556,6 +562,9 @@
 
   .underline {
     text-decoration-line: underline;
+  }
+  .underline-offset-3{
+    text-underline-offset: 5px;
   }
 
   .shadow {

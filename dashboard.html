@@ -6,32 +6,34 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Dashboard</title>
     <link rel='stylesheet' href='./src/output.css'>
-
 </head>
 
 <body class="font-serif">
-    <header class="w-full py-5 shadow">
+    <header class="w-full py-5 shadow-lg bg-blue-100">
         <nav class="w-full">
             <ul class="flex flex-row justify-between">
-                <div class="flex flex-row justify-center gap-5 text-xl px-3">
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                    <li><a href="income.html">Income</a></li>
-                    <li><a href="expense.html">Expense</a></li>
+                <div class="flex flex-row justify-center gap-5 text-xl px-5">
+                    <li class="underline underline-offset-3"><a href="dashboard.html">Dashboard</a></li>
+                    <li class="underline underline-offset-3"><a href="income.html">Income</a></li>
+                    <li class="underline underline-offset-3"><a href="expense.html">Expense</a></li>
+                </div>
+                <div>
+                    <h1 class="text-3xl font-bold text-center">MyKha₹cha</h1>
                 </div>
                 <div class="px-3">
-                    <li class="text-red-700"><a href="logout">Logout</a></li>
+                    <li class="text-red-200 text-xl"><a href="logout">Logout</a></li>
                 </div>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="px-3 py-3">
         <section id="filter" class="px-3 py-5">
             <div>
                 <h2 class="text-3xl">Filters</h2>
                 <div class="flex flex-row gap-10">
                     <div>
                         <label for="month" class="text-xl">Select the Month:</label>
-                        <select name="month" id="month" class="px-2 py-2">
+                        <select name="month" id="month" class="px-2 py-2 bg-blue-100 rounded-2xl">
                             <option value="January">Jan</option>
                             <option value="February">Feb</option>
                             <option value="March">Mar</option>
@@ -49,11 +51,13 @@
                     <div class="flex flex-row gap-5">
                         <label for="from" class="text-xl">
                             From:</label>
-                        <input type="date" class="px-2 py-2">
+                        <input type="date" class="px-2 py-2 bg-blue-100 rounded-2xl">
 
                         <label for="to" class="text-xl">
                             To:</label>
-                        <input type="date" class="px-2 py-2">
+                        <input type="date" class="px-2 py-2 bg-blue-100 rounded-2xl">
+
+                        <button class="text-2xl bg-blue-400 text-white rounded-2xl px-2 py-2 hover:pointer">Apply Filter</button>
 
                     </div>
                 </div>
@@ -63,15 +67,15 @@
             <h1 class="text-4xl font-bold  py-3">September</h1>
         </section>
         <section class="info flex flex-row justify-center gap-15">
-            <div class="border-2 px-2 py-2 rounded w-tenth h-tenth text-center">
+            <div class="border-2 px-2 py-2 rounded-2xl w-tenth h-tenth text-center bg-green-100">
                 <h1 class="text-4xl">Income</h1>
                 <h2 class="text-3xl">₹<span>800</span></h2>
             </div>
-            <div class="border-2 px-2 py-2 rounded w-tenth h-tenth text-center">
+            <div class="border-2 px-2 py-2 rounded-2xl w-tenth h-tenth text-center bg-red-100">
                 <h1 class="text-4xl">Expense</h1>
                 <h2 class="text-3xl">₹<span>300</span></h2>
             </div>
-            <div class="border-2 px-2 py-2 rounded w-tenth h-tenth text-center">
+            <div class="border-2 px-2 py-2 rounded-2xl w-tenth h-tenth text-center bg-blue-100">
                 <h1 class="text-4xl">Savings</h1>
                 <h2 class="text-3xl">₹<span>500</span></h2>
             </div>
@@ -79,209 +83,60 @@
         <section class="charts">
             <h2>Charts</h2>
         </section>
-        <section class="monthly-repo px-2 py-3 flex flex-col justify-center">
+        <section class="monthly-repo px-2 py-3 flex flex-col justify-center gap-5">
             <h2 class="text-4xl">Report</h2>
-            <table>
+            <table class="bg-blue-100 w-full border-collapse border border-slate-400">
                 <thead class="text-xl shadow-2xs">
-                    <tr>
-                        <th>Month</th>
-                        <th>Income</th>
-                        <th>Expense</th>
-                        <th>Balance</th>
-                        <th>saved</th>
+                    <tr class="bg-slate-100">
+                        <th class="border border-slate-300 p-3 text-left">Month</th>
+                        <th class="border border-slate-300 p-3 text-left">Income</th>
+                        <th class="border border-slate-300 p-3 text-left">Expense</th>
+                        <th class="border border-slate-300 p-3 text-left">Balance</th>
+                        <th class="border border-slate-300 p-3 text-left">saved</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="text-center">
-                        <td>september</td>
-                        <td>800</td>
-                        <td>500</td>
-                        <td>300</td>
-                        <td>67%</td>
+                    <tr class="text-center text-3xl">
+                        <td class="border border-slate-300 p-3">september</td>
+                        <td class="border border-slate-300 p-3">800</td>
+                        <td class="border border-slate-300 p-3">500</td>
+                        <td class="border border-slate-300 p-3">300</td>
+                        <td class="border border-slate-300 p-3">67%</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <section class="total-transaction px-2 py-3 flex flex-col justify-center">
+        <section class="total-transaction px-2 py-3 flex flex-col justify-center gap-5">
             <h2 class="text-4xl">Total Transaction</h2>
-            <table class="repo-table">
+            <table class="repo-table bg-blue-100 w-full border-collapse border border-slate-400">
                     <thead class="text-xl shadow-2xs">
-                        <tr>
-                            <th>Date</th>
-                            <th>Category</th>
-                            <th>Amount</th>
+                        <tr class="bg-slate-100">
+                            <th class="border border-slate-300 p-3 text-left">Date</th>
+                            <th class="border border-slate-300 p-3 text-left">Category</th>
+                            <th class="border border-slate-300 p-3 text-left">Amount</th>
                         </tr>
                     </thead>
                     <tbody class="text-center">
-                        <tr>
-                            <td>2 sep</td>
-                            <td>Bonus</td>
-                            <td>50</td>
+                        <tr class="text-3xl">
+                            <td class="border border-slate-300 p-3">2 sep</td>
+                            <td class="border border-slate-300 p-3">Bonus</td>
+                            <td class="border border-slate-300 p-3"> 50</td>
                         </tr>
-                        <tr>
-                            <td>3sep</td>
-                            <td>Salary</td>
-                            <td>100</td>
+                        <tr class="text-3xl">
+                            <td class="border border-slate-300 p-3">3sep</td>
+                            <td class="border border-slate-300 p-3">Salary</td>
+                            <td class="border border-slate-300 p-3">100</td>
                         </tr>
-                        <tr>
-                            <td>5sep</td>
-                            <td>Gift</td>
-                            <td>300</td>
+                        <tr class="text-3xl">
+                            <td class="border border-slate-300 p-3">5sep</td>
+                            <td class="border border-slate-300 p-3">Gift</td>
+                            <td class="border border-slate-300 p-3">300</td>
                         </tr>
                     </tbody>
                 </table>
         </section>
     </main>
-    <footer>
-
-    </footer>
 </body>
 
 </html>
-
-
-<!-- <!DOCTYPE html>
-<html lang='en'>
-
-<head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Dashboard</title>
-    <link rel='stylesheet' href='styles.css'>
-    <link rel='stylesheet' href='./src/output.css'>
-
-</head>
-
-<body>
-    <header class="head">
-        <nav id="nav-top">
-            <ul class="menus">
-                <li><img src="navLogo/Gemini_Generated_Image_xsnlkpxsnlkpxsnl.png" alt="Logo" id="logo"></li>
-                <li>Dashboard</li>
-                <li>Income overview</li>
-                <li>Expense overview</li>
-                <li><button id="toggle">Light</button></li>
-                <Button id="logout">Logout</Button>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div>
-            <h2>Filters</h2>
-            <div class="filter-container">
-                <div class="menus filters">
-                    <div>
-                        <h3>Month</h3>
-                        <select name="month" id="month">
-                            <option value="January">Jan</option>
-                            <option value="February">Feb</option>
-                            <option value="March">Mar</option>
-                            <option value="April">Apr</option>
-                            <option value="May">May</option>
-                            <option value="June">June</option>
-                            <option value="July">July</option>
-                            <option value="August">Aug</option>
-                            <option value="September">Sept</option>
-                            <option value="October">Oct</option>
-                            <option value="November">Nov</option>
-                            <option value="December">Dec</option>
-                        </select>
-                    </div>
-                    <div>
-                        <h3>Date (From - To)</h3>
-                        <div class="menus filters">
-                            <div>
-                                <h2>From</h2>
-                                <input type="date">
-                            </div>
-                            <div>
-                                <h2>To</h2>
-                                <input type="date">
-                            </div>
-                        </div>   
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h1>September 2026</h1>
-        <div class="menus data">
-            <div class="stats">
-                <h4>Income</h4>
-                <h1 id="income">₹<span>800</span></h1>
-            </div>
-            <div class="stats">
-                <h4>Expense</h4>
-                <h1 id="expense">₹<span>500</span></h1>
-            </div>
-            <div class="stats">
-                <h4>Savings</h4>
-                <h1 id="saving">₹<span>300</span></h1>
-            </div>
-        </div>
-        <section class="charts">
-            <h2>Charts</h2>
-        </section>
-        <div class="monthlyrepo">
-            <h2>Monthly Reports</h2>
-            <div class="repo-container">
-                <table border="2" class="repo-table">
-                    <thead>
-                        <tr>
-                            <th>Month</th>
-                            <th>Income</th>
-                            <th>Expense</th>
-                            <th>Balance</th>
-                            <th>saved</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>september</td>
-                            <td>800</td>
-                            <td>500</td>
-                            <td>300</td>
-                            <td>67%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <section>
-            <div>
-                <h1>Transactions in <span>September</span> <span>2026</span></h1>
-            </div>
-            <div class="repo-container">
-                <h2>Total Entries</h2>
-                <table border="2" class="repo-table">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Category</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2 sep</td>
-                            <td>Bonus</td>
-                            <td>50</td>
-                        </tr>
-                        <tr>
-                            <td>3sep</td>
-                            <td>Salary</td>
-                            <td>100</td>
-                        </tr>
-                        <tr>
-                            <td>5sep</td>
-                            <td>Gift</td>
-                            <td>300</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
-</body>
-
-</html> -->
