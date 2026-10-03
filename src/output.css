@@ -20,6 +20,7 @@
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-green-800: oklch(69.496% 0.18175 145.47);
+    --color-red-500:oklch(63.7% 0.237 25.331);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -256,6 +257,9 @@
   .flex-row {
     flex-direction: row;
   }
+  .flex-row-reverse{
+    flex-direction: row-reverse;
+  }
   .items-center {
     align-items: center;
   }
@@ -324,6 +328,9 @@
   .bg-blue-400 {
     background-color: var(--color-blue-400);
   }
+  .bg-blue-100{
+    background-color: var(--color-blue-100);
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
@@ -363,6 +370,9 @@
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
+  .px-5{
+    padding-inline: calc(var(--spacing) * 5);
+  }
   .py-1 {
     padding-block: var(--spacing);
   }
@@ -371,6 +381,9 @@
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
+  }
+  .py-5{
+    padding-block: calc(var(--spacing) * 5);
   }
   .text-center {
     text-align: center;
@@ -416,8 +429,14 @@
   .text-white {
     color: var(--color-white);
   }
+  .text-red-500{
+    color: var(--color-red-500);
+  }
   .underline {
     text-decoration-line: underline;
+  }
+  .underline-offset-3{
+    text-underline-offset: 5px;
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
