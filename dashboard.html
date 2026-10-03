@@ -21,19 +21,19 @@
                     <h1 class="text-3xl font-bold text-center">MyKha₹cha</h1>
                 </div>
                 <div class="px-3">
-                    <li class="text-red-200 text-xl"><a href="logout">Logout</a></li>
+                    <li class="text-red-500 text-xl"><a href="logout">Logout</a></li>
                 </div>
             </ul>
         </nav>
     </header>
-    <main class="px-3 py-3">
+    <main class="px-3 py-3 font-serif">
         <section id="filter" class="px-3 py-5">
             <div>
-                <h2 class="text-3xl">Filters</h2>
+                <h2 class="text-3xl py-3">Filters</h2>
                 <div class="flex flex-row gap-10">
                     <div>
                         <label for="month" class="text-xl">Select the Month:</label>
-                        <select name="month" id="month" class="px-2 py-2 bg-blue-100 rounded-2xl">
+                        <select name="month" id="month" class="px-3 py-3 bg-blue-100 rounded-2xl">
                             <option value="January">Jan</option>
                             <option value="February">Feb</option>
                             <option value="March">Mar</option>
@@ -51,13 +51,13 @@
                     <div class="flex flex-row gap-5">
                         <label for="from" class="text-xl">
                             From:</label>
-                        <input type="date" class="px-2 py-2 bg-blue-100 rounded-2xl">
+                        <input type="date" class="px-3 py-3 bg-blue-100 rounded-2xl">
 
                         <label for="to" class="text-xl">
                             To:</label>
-                        <input type="date" class="px-2 py-2 bg-blue-100 rounded-2xl">
+                        <input type="date" class="px-3 py-3 bg-blue-100 rounded-2xl">
 
-                        <button class="text-2xl bg-blue-400 text-white rounded-2xl px-2 py-2 hover:pointer">Apply Filter</button>
+                        <button class="text-xl bg-blue-400 text-white rounded-xl px-2 py-2 hover:pointer">Apply Filter</button>
 
                     </div>
                 </div>
@@ -67,24 +67,24 @@
             <h1 class="text-4xl font-bold  py-3">September</h1>
         </section>
         <section class="info flex flex-row justify-center gap-15">
-            <div class="border-2 px-2 py-2 rounded-2xl w-tenth h-tenth text-center bg-green-100">
-                <h1 class="text-4xl">Income</h1>
-                <h2 class="text-3xl">₹<span>800</span></h2>
+            <div class="border-2 px-5 py-5 rounded-2xl text-center bg-green-100 shadow-2x min-w-1/4">
+                <h1 class="text-3xl">Income</h1>
+                <h2 class="text-6xl font-bold">₹<span>800</span></h2>
             </div>
-            <div class="border-2 px-2 py-2 rounded-2xl w-tenth h-tenth text-center bg-red-100">
-                <h1 class="text-4xl">Expense</h1>
-                <h2 class="text-3xl">₹<span>300</span></h2>
+            <div class="border-2 px-5 py-5 rounded-2xl   text-center bg-red-100 shadow-2xl min-w-1/4">
+                <h1 class="text-3xl">Expense</h1>
+                <h2 class="text-6xl font-bold">₹<span>300</span></h2>
             </div>
-            <div class="border-2 px-2 py-2 rounded-2xl w-tenth h-tenth text-center bg-blue-100">
-                <h1 class="text-4xl">Savings</h1>
-                <h2 class="text-3xl">₹<span>500</span></h2>
+            <div class="border-2 px-5 py-5 rounded-2xl   text-center bg-blue-100 shadow-2xl min-w-1/4">
+                <h1 class="text-3xl">Savings</h1>
+                <h2 class="text-6xl font-bold">₹<span>500</span></h2>
             </div>
         </section>
         <section class="charts">
             <h2>Charts</h2>
         </section>
         <section class="monthly-repo px-2 py-3 flex flex-col justify-center gap-5">
-            <h2 class="text-4xl">Report</h2>
+            <h2 class="text-4xl py-3">Report</h2>
             <table class="bg-blue-100 w-full border-collapse border border-slate-400">
                 <thead class="text-xl shadow-2xs">
                     <tr class="bg-slate-100">
@@ -108,7 +108,7 @@
         </section>
 
         <section class="total-transaction px-2 py-3 flex flex-col justify-center gap-5">
-            <h2 class="text-4xl">Total Transaction</h2>
+            <h2 class="text-4xl py-3">Total Transaction</h2>
             <table class="repo-table bg-blue-100 w-full border-collapse border border-slate-400">
                     <thead class="text-xl shadow-2xs">
                         <tr class="bg-slate-100">
