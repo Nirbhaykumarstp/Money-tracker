@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>AddIncome</title>
     <link rel='stylesheet' href='./src/output.css'>
 </head>
+
 <body>
-    <header class="absolute top-0 flex flex-row justify-center w-full px-2 py-3 bg-green-100">
-        <nav class="sm:w-full">
-            <ul class="flex flex-row justify-center gap-10">
-                <li class="text-2xl underline underline-offset-2">DashBoard</li>
-                <li class="text-2xl underline underline-offset-2">Income</li>
-                <li class="text-2xl underline underline-offset-2">Expense</li>
+    <header class="w-full py-5 shadow-lg bg-blue-100">
+        <nav class="w-full">
+            <ul class="flex  justify-between flex-row-reverse">
+                <div class="flex flex-row justify-center gap-5 text-xl px-5">
+                    <li class="underline underline-offset-3"><a href="dashboard.html">Dashboard</a></li>
+                    <li class="underline underline-offset-3"><a href="income.html">Income</a></li>
+                    <li class="underline underline-offset-3"><a href="expense.html">Expense</a></li>
+                </div>
+                <div class="px-5">
+                    <h1 class="text-3xl font-bold text-center">MyKha₹cha</h1>
+                </div>
             </ul>
         </nav>
     </header>
-    <div class="w-full max-w-md bg-blue-100 p-6 rounded-lg shadow-lg shadow-black sm:w-1/2 sm:m-auto lg:m-auto">
-        <!-- <h2 class="font-bold text-3xl font-sans">Income Overview</h2> -->
-        <h1 class="text-2xl font-bold text-center mb-6">
-            Add Income
-        </h1>
+    <main class="py-5">
+        <div class="w-full max-w-md  p-6 rounded-lg shadow-2xl shadow-black sm:w-1/2 sm:m-auto lg:m-auto">
+            <h1 class="text-2xl font-bold text-center mb-6">
+                Add Income
+            </h1>
 
-        <form class="flex flex-col gap-10">
-            
-            <div class="mb-4">
-                <label for="amount" class="block text-sm font-medium text-gray-700 mb-1">
-                    Amount
-                </label>
+            <form class="flex flex-col gap-10">
 
-                <input type="number" id="amount" name="amount" placeholder="Enter the amount.." class="w-full px-3 py-2 border border-gray-300 rounded-md
-                           focus:outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
-
-            
-            <div class="mb-4 flex flex-row gap-10">
                 <div class="mb-4">
-                    <label for="category" class="block text-sm font-medium text-gray-700 mb-0">
-                        Category
+                    <label for="amount" class="block text-sm font-medium text-gray-700 mb-1">
+                        Amount
                     </label>
-                    <select name="category" id="category" class="w-full max-w-md px-3 py-2  border border-gray-300 rounded-md
+
+                    <input type="number" id="amount" name="amount" placeholder="Enter the amount.." class="w-full px-3 py-2 border border-gray-300 rounded-md
+                           focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+
+                <div class="mb-4 flex flex-row gap-10">
+                    <div class="mb-4">
+                        <label for="category" class="block text-sm font-medium text-gray-700 mb-0">
+                            Category
+                        </label>
+                        <select name="category" id="category" class="w-full max-w-md px-3 py-2  border border-gray-300 rounded-md
                            focus:outline-none focus:ring-2>
-                        <option value="Salary">Salary</option>
-                        <option value="Bonus">Bonus</option>
-                        <option value="Gift">Gift</option>
-                    </select>
+                        <option value=" Salary">Salary</option>
+                            <option value="Bonus">Bonus</option>
+                            <option value="Gift">Gift</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="date" class="block text-sm font-medium text-gray-700 mb-1">
+                            Date
+                        </label>
+
+                        <input type="date" id="date" name="date" placeholder="Enter the date" class="w-full px-3 py-2 border border-gray-300 rounded-md
+                           focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
                 </div>
+
                 <div class="mb-4">
-                    <label for="date" class="block text-sm font-medium text-gray-700 mb-1">
-                        Date
+                    <label for="title" class="block text-sm font-medium text-gray-700 mb-1">
+                        Title
                     </label>
-
-                    <input type="date" id="date" name="date" placeholder="Enter the date" class="w-full px-3 py-2 border border-gray-300 rounded-md
+                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md
                            focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
-            </div>
-
-            <div class="mb-4">
-                <label for="title" class="block text-sm font-medium text-gray-700 mb-1">
-                    Title
-                </label>
-                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md
-                           focus:outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
-            <button type="submit" class="w-full bg-green-800 text-black py-2 rounded-md
+                <button type="submit" class="w-full bg-green-800 text-black py-2 rounded-md
                      transition duration-300">
-                Add
-            </button>
-        </form>
-    </div>
+                    Add
+                </button>
+            </form>
+        </div>
+    </main>
 </body>
+
 </html>
