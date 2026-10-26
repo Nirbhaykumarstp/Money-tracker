@@ -8,8 +8,8 @@
     <link rel='stylesheet' href='./src/output.css'>
 </head>
 
-<body class="font-serif">
-    <header class="w-full py-5 shadow-lg bg-blue-100">
+<body class="">
+    <header class="w-full py-5 shadow-lg bg-blue-100 dark:bg-gray-800 dark:text-white dark:shadow-2xl">
         <nav class="w-full">
             <ul class="flex flex-row justify-between">
                 <div class="flex flex-row justify-center gap-5 text-xl px-5">
@@ -20,16 +20,17 @@
                 <div>
                     <h1 class="text-3xl font-bold text-center">MyKha₹cha</h1>
                 </div>
-                <div class="px-3">
+                <div class="px-3 flex flex-row-reverse gap-7">
                     <li class="text-red-500 text-xl"><a href="logout">Logout</a></li>
+                    <button id="theme-toggle" class="border-2 p-2 rounded-b-sm">Dark</button>
                 </div>
             </ul>
         </nav>
     </header>
-    <main class="px-3 py-3 font-serif">
-        <section id="filter" class="px-3 py-5">
+    <main class="px-3 py-3 font-serif dark:bg-gray-700 dark:text-black">
+        <section id="filter" class="px-3 py-5 ">
             <div>
-                <h2 class="text-3xl py-3">Filters</h2>
+                <h2 class="text-3xl py-3 dark:text-white">Filters</h2>
                 <div class="flex flex-row gap-10">
                     <div>
                         <label for="month" class="text-xl">Select the Month:</label>
@@ -57,25 +58,26 @@
                             To:</label>
                         <input type="date" class="px-3 py-3 bg-blue-100 rounded-2xl">
 
-                        <button class="text-xl bg-blue-400 text-white rounded-xl px-2 py-2 hover:pointer">Apply Filter</button>
+                        <button class="text-xl bg-blue-400 text-white rounded-xl px-2 py-2 hover:pointer font-sans">Apply
+                            Filter</button>
 
                     </div>
                 </div>
             </div>
         </section>
-        <section class="current-month px-3 py-3">
+        <section class="current-month px-3 py-3 font-sans">
             <h1 class="text-4xl font-bold  py-3">September</h1>
         </section>
-        <section class="info flex flex-row justify-center gap-15">
-            <div class="border-2 px-5 py-5 rounded-2xl text-center bg-green-100 shadow-2x min-w-1/4">
+        <section class="info flex flex-row justify-center gap-15 font-sans">
+            <div class="border-2 px-5 py-5 rounded-2xl text-center bg-green-100 shadow-2x min-w-1/4 dark:bg-green-200 dark:text-black">
                 <h1 class="text-3xl">Income</h1>
                 <h2 class="text-6xl font-bold">₹<span>800</span></h2>
             </div>
-            <div class="border-2 px-5 py-5 rounded-2xl   text-center bg-red-100 shadow-2xl min-w-1/4">
+            <div class="border-2 px-5 py-5 rounded-2xl   text-center bg-red-100 shadow-2xl min-w-1/4 dark:bg-red-200 dark:text-black">
                 <h1 class="text-3xl">Expense</h1>
                 <h2 class="text-6xl font-bold">₹<span>300</span></h2>
             </div>
-            <div class="border-2 px-5 py-5 rounded-2xl   text-center bg-blue-100 shadow-2xl min-w-1/4">
+            <div class="border-2 px-5 py-5 rounded-2xl   text-center bg-blue-100 shadow-2xl min-w-1/4 dark:text-black">
                 <h1 class="text-3xl">Savings</h1>
                 <h2 class="text-6xl font-bold">₹<span>500</span></h2>
             </div>
@@ -83,16 +85,16 @@
         <section class="charts">
             <h2>Charts</h2>
         </section>
-        <section class="monthly-repo px-2 py-3 flex flex-col justify-center gap-5">
-            <h2 class="text-4xl py-3">Report</h2>
-            <table class="bg-blue-100 w-full border-collapse border border-slate-400">
+        <section class="monthly-repo px-2 py-3 flex flex-col justify-center gap-5 font-sans">
+            <h2 class="text-4xl py-3 dark:text-white">Report</h2>
+            <table class="bg-blue-100 w-full border-collapse border border-slate-400 shadow-2xl">
                 <thead class="text-xl shadow-2xs">
                     <tr class="bg-slate-100">
-                        <th class="border border-slate-300 p-3 text-left">Month</th>
-                        <th class="border border-slate-300 p-3 text-left">Income</th>
-                        <th class="border border-slate-300 p-3 text-left">Expense</th>
-                        <th class="border border-slate-300 p-3 text-left">Balance</th>
-                        <th class="border border-slate-300 p-3 text-left">saved</th>
+                        <th class="border border-slate-300 p-3 text-center">Month</th>
+                        <th class="border border-slate-300 p-3 text-center">Income</th>
+                        <th class="border border-slate-300 p-3 text-center">Expense</th>
+                        <th class="border border-slate-300 p-3 text-center">Balance</th>
+                        <th class="border border-slate-300 p-3 text-center">saved</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -107,36 +109,48 @@
             </table>
         </section>
 
-        <section class="total-transaction px-2 py-3 flex flex-col justify-center gap-5">
-            <h2 class="text-4xl py-3">Total Transaction</h2>
-            <table class="repo-table bg-blue-100 w-full border-collapse border border-slate-400">
-                    <thead class="text-xl shadow-2xs">
-                        <tr class="bg-slate-100">
-                            <th class="border border-slate-300 p-3 text-left">Date</th>
-                            <th class="border border-slate-300 p-3 text-left">Category</th>
-                            <th class="border border-slate-300 p-3 text-left">Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center">
-                        <tr class="text-3xl">
-                            <td class="border border-slate-300 p-3">2 sep</td>
-                            <td class="border border-slate-300 p-3">Bonus</td>
-                            <td class="border border-slate-300 p-3"> 50</td>
-                        </tr>
-                        <tr class="text-3xl">
-                            <td class="border border-slate-300 p-3">3sep</td>
-                            <td class="border border-slate-300 p-3">Salary</td>
-                            <td class="border border-slate-300 p-3">100</td>
-                        </tr>
-                        <tr class="text-3xl">
-                            <td class="border border-slate-300 p-3">5sep</td>
-                            <td class="border border-slate-300 p-3">Gift</td>
-                            <td class="border border-slate-300 p-3">300</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <section class="total-transaction px-2 py-3 flex flex-col justify-center gap-5 font-sans">
+            <h2 class="text-4xl py-3 dark:text-white">Total Transaction</h2>
+            <table class="repo-table bg-blue-100 w-full border-collapse border border-slate-400 shadow-2xl">
+                <thead class="text-xl shadow-2xs">
+                    <tr class="bg-slate-100">
+                        <th class="border border-slate-300 p-3 text-center">Date</th>
+                        <th class="border border-slate-300 p-3 text-center">Category</th>
+                        <th class="border border-slate-300 p-3 text-center">Amount</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr class="text-3xl">
+                        <td class="border border-slate-300 p-3">2 sep</td>
+                        <td class="border border-slate-300 p-3">Bonus</td>
+                        <td class="border border-slate-300 p-3"> 50</td>
+                    </tr>
+                    <tr class="text-3xl">
+                        <td class="border border-slate-300 p-3">3sep</td>
+                        <td class="border border-slate-300 p-3">Salary</td>
+                        <td class="border border-slate-300 p-3">100</td>
+                    </tr>
+                    <tr class="text-3xl">
+                        <td class="border border-slate-300 p-3">5sep</td>
+                        <td class="border border-slate-300 p-3">Gift</td>
+                        <td class="border border-slate-300 p-3">300</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
+    <script>
+        const themeBtn = document.getElementById("theme-toggle")
+        themeBtn.addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark")
+            if (document.documentElement.classList.contains("dark")) {
+                themeBtn.textContent = "Light Mode"
+            }
+            else {
+                themeBtn.textContent = "Dark Mode"
+            }
+        })
+    </script>
 </body>
 
 </html>
