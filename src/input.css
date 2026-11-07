@@ -1,2 +1,71 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* 1. Light mode colors */
+:root {
+  --kh-body: #f8fafc;
+  --kh-nav: #ffffff;
+  --kh-card: #ffffff;
+  --kh-filter: #f1f5f9;
+  --kh-inset: #e2e8f0;
+  --kh-input: #ffffff;
+  --kh-rowalt: #f8fafc;
+  --kh-line: #e2e8f0;
+
+  --kh-income: #15803d;
+  --kh-income-bd: #dcfce7;
+
+  --kh-expense: #dc2626;
+  --kh-expense-bd: #fee2e2;
+
+  --kh-savings: #7c3aed;
+  --kh-savings-bd: #ede9fe;
+
+  --kh-pill: #dbeafe;
+}
+
+/* 2. Dark mode colors */
+.dark {
+  --kh-body: #090e17;
+  --kh-nav: #0a131f;
+  --kh-card: #131d2e;
+  --kh-filter: #151f32;
+  --kh-inset: #0b1320;
+  --kh-input: #0d1524;
+  --kh-rowalt: #0f1826;
+  --kh-line: #1e293b;
+
+  --kh-income: #06b271;
+  --kh-income-bd: #0a3a2e;
+
+  --kh-expense: #d21218;
+  --kh-expense-bd: #441822;
+
+  --kh-savings: #0f2744;
+  --kh-savings-bd: #163861;
+
+  --kh-pill: #073b30;
+}
+
+/* 3. Register colors as Tailwind utilities */
+@theme {
+  --color-kh-body: var(--kh-body);
+  --color-kh-nav: var(--kh-nav);
+  --color-kh-card: var(--kh-card);
+  --color-kh-filter: var(--kh-filter);
+  --color-kh-inset: var(--kh-inset);
+  --color-kh-input: var(--kh-input);
+  --color-kh-rowalt: var(--kh-rowalt);
+  --color-kh-line: var(--kh-line);
+
+  --color-kh-income: var(--kh-income);
+  --color-kh-income-bd: var(--kh-income-bd);
+
+  --color-kh-expense: var(--kh-expense);
+  --color-kh-expense-bd: var(--kh-expense-bd);
+
+  --color-kh-savings: var(--kh-savings);
+  --color-kh-savings-bd: var(--kh-savings-bd);
+
+  --color-kh-pill: var(--kh-pill);
+}
