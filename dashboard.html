@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-bold">₹<span>800</span></h1>
+                        <h1 class="text-3xl font-bold">₹<span id="total-incm">800</span></h1>
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-bold">₹<span>500</span></h1>
+                        <h1 class="text-3xl font-bold">₹<span id="total-expns">500</span></h1>
                     </div>
                 </div>
 
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-bold">₹<span>300</span></h1>
+                        <h1 class="text-3xl font-bold">₹<span id="total-svng">300</span></h1>
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@
                                 <th class="px-5 py-4 text-center text-sm">Saved (%)</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-100">
+                        <tbody class="divide-y divide-slate-100" id="month-sep">
                             <!-- September -->
                             <tr class="hover:bg-slate-50 transition-colors">
                                 <td class="px-4 py-3 font-semibold text-blue-700">
@@ -251,7 +251,7 @@
                                 <th class="py-3 px-4 text-right">Amount (₹)</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-100 dark:text-white">
+                        <tbody class="divide-y divide-slate-100 dark:text-white" id="total-trnscn">
                             <tr>
                                 <td class="py-3 px-4 font-semibold text-slate-800">📅 02 Sep 2026</td>
                                 <td class="py-3 px-4">
@@ -323,6 +323,8 @@
     <script>
         lucide.createIcons();
     </script>
+    <script src="./src/store.js"></script>
+    <script src="./dashboard.js"></script>
 </body>
 
 </html>
