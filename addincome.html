@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Add Income</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <header class="flex flex-row justify-between bg-gray-100 p-4 shadow-xl">
+        <h1 class="text-3xl">Mykharcha</h1>
+        <nav>
+            <ul class="flex flex-row gap-10 justify-center">
+                <li class="text-xl hover:underline underline-offset-8 hover:text-gray-950"><a
+                        href="dashboard.html">Dashboard</a></li>
+                <li class="text-xl hover:underline underline-offset-8  hover:text-gray-950"><a
+                        href="addincome.html">Income</a></li>
+                <li class="text-xl hover:underline underline-offset-8  hover:text-gray-950"><a
+                        href="addexpense.html">Expense</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="flex min-h-screen">
+        <div class="m-auto p-4 bg-gray-50 shadow-2xl">
+            <h1 class="text-3xl font-semibold">Add Income</h1>
+            <p>Record a new earning or credit inflow to your ledger</p>
+            <form action="" class="flex flex-col gap-4 p-2 mt-4 font-semibold">
+                <div class="flex flex-col gap-3">
+                    <label for="amount">Amount</label>
+                    <input type="number" placeholder="Enter the amount" class="p-2" id="incm-amount">
+                </div>
+                <div class="flex flex-row justify-between gap-4">
+                    <div class="flex flex-col gap-3">
+                        <label for="category">Category</label>
+                        <select name="category" class="p-2" id="incm-cat">
+                            <option value="Gift">Gift</option>
+                            <option value="Bonus">Bonus</option>
+                            <option value="Salary">Salary</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <label for="date">Date</label>
+                        <input type="date" class="p-2" id="date">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="p-2 bg-green-600 text-white w-full" id="add-incm">Add Income</button>
+                </div>
+            </form> 
+        </div>
+    </main>
+    <script src="./addincome.js"></script>
+</body>
+</html>

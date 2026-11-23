@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Inter",sans-serif;
+}
+.head{
+    min-width: 100%;
+}
+li #logo{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    align-self: center;
+}
+#logout{
+    padding: 0.5%;
+    position:absolute;
+    right: 0;
+    margin-right: 20px;
+    font-size: medium;
+    border-radius: 5px;
+}
+#toggle{
+    font-family: "Inter",sans-serif;
+    padding: 15%;
+    font-size: 1rem;
+}
+.menus{
+    background-color: #daeef1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    padding: 2%;
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+.menus li{
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+.stats h1 span{
+    font-weight: 700;
+}
+main{
+    padding: 3%;
+    background-color: #d3e2de69;
+}
+select,input{
+    width: 10rem;
+    padding: 4%;
+}
+.data{
+    gap: 12%;
+}
+.stats{
+    min-width: 15%;
+    font-size: 2rem;
+    border: 3px solid black;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.filters{
+    justify-content:flex-start;
+    gap: 10%;
+    border-radius: 3rem;
+}
+.filter-container{
+    padding: 1%;
+}
+
+.monthlyrepo{
+    max-width: 100%;
+}
+.repo-table{
+    min-width: 100%;
+    min-height: 100%;
+}
+.repo-container{
+    padding: 4%;
+}
+table{
+    border: ;
+}
+tr,td,th{
+    padding: 1%;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+}
+#income{
+    color: #16A34A;
+}
+#expense{
+    color: #DC2626;
+}
+#saving{
+    color: #2563EB;
+}

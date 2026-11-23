@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Add Expense</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <header class="flex flex-row justify-between bg-gray-100 p-4 shadow-xl">
+        <h1 class="text-3xl">Mykharcha</h1>
+        <nav>
+            <ul class="flex flex-row gap-10 justify-center">
+                <li class="text-xl hover:underline underline-offset-8 hover:text-gray-950"><a
+                        href="dashboard.html">Dashboard</a></li>
+                <li class="text-xl hover:underline underline-offset-8  hover:text-gray-950"><a
+                        href="addincome.html">Income</a></li>
+                <li class="text-xl hover:underline underline-offset-8  hover:text-gray-950"><a
+                        href="addexpense.html">Expense</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="flex min-h-screen">
+        <div class="m-auto p-4 bg-gray-50 shadow-2xl">
+            <h1 class="text-3xl font-semibold">Add Expense</h1>
+            <p>Record your day to day outgoings</p>
+            <form action="" class="flex flex-col gap-4 p-2 mt-4 font-semibold">
+                <div class="flex flex-col gap-3">
+                    <label for="amount">Amount</label>
+                    <input type="number" placeholder="Enter the amount" class="p-2" id="expns-amount">
+                </div>
+                <div class="flex flex-row justify-between gap-4">
+                    <div class="flex flex-col gap-3">
+                        <label for="category">Category</label>
+                        <select name="category" id="expns-cat" class="p-2">
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Food">Food</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Stay">Stay</option>
+                            <option value="Medicine">Medicine</option>
+                            <option value="Shopping">Shopping</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <label for="date">Date</label>
+                        <input type="date" class="p-2" id="date">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="p-2 bg-red-600 text-white w-full" id="add-expns">Add Expense</button>
+                </div>
+            </form> 
+        </div>
+    </main>
+    <script src="./addexpense.js"></script>
+</body>
+</html>
