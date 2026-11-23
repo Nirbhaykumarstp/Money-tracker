@@ -28,12 +28,12 @@
             <form action="" class="flex flex-col gap-4 p-2 mt-4 font-semibold">
                 <div class="flex flex-col gap-3">
                     <label for="amount">Amount</label>
-                    <input type="number" placeholder="Enter the amount" class="p-2">
+                    <input type="number" placeholder="Enter the amount" class="p-2" id="expns-amount">
                 </div>
                 <div class="flex flex-row justify-between gap-4">
                     <div class="flex flex-col gap-3">
                         <label for="category">Category</label>
-                        <select name="category" id="" class="p-2">
+                        <select name="category" id="expns-cat" class="p-2">
                             <option value="Entertainment">Entertainment</option>
                             <option value="Food">Food</option>
                             <option value="Travel">Travel</option>
@@ -44,14 +44,15 @@
                     </div>
                     <div class="flex flex-col gap-3">
                         <label for="date">Date</label>
-                        <input type="date" class="p-2">
+                        <input type="date" class="p-2" id="date">
                     </div>
                 </div>
                 <div class="text-center">
-                    <button class="p-2 bg-red-600 text-white w-full">Add Income</button>
+                    <button class="p-2 bg-red-600 text-white w-full" id="add-expns">Add Expense</button>
                 </div>
             </form> 
         </div>
     </main>
+    <script src="./addexpense.js"></script>
 </body>
 </html>
